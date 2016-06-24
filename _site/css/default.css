@@ -1,0 +1,94 @@
+@charset "UTF-8";
+h1 {
+  font-weight: 600;
+  font-size: 64px;
+  margin: 0; }
+
+.navi {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  display: block;
+  z-index: 10;
+  font-size: 1em;
+  color: white; }
+  .navi nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block; }
+    .navi nav ul li {
+      display: inline;
+      margin: 0 10px;
+      padding: 5px 15px;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.5); }
+      .navi nav ul li:last-child {
+        margin-right: 0; }
+      .navi nav ul li:hover {
+        background-color: white; }
+        .navi nav ul li:hover a {
+          color: black; }
+      .navi nav ul li a {
+        color: white;
+        text-decoration: none; }
+
+.hero {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  background-color: #221028;
+  overflow: hidden;
+  text-align: center; }
+  .hero h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white; }
+
+.hero-img {
+  height: 1200px;
+  width: 100%;
+  position: absolute;
+  background-image: url("../images/goldengate.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+@media screen and (max-width: 480px) {
+  .hero {
+    height: 60vh; }
+    .hero h1 {
+      font-size: 32px; } }
+.main {
+  margin: 30px auto 30px; }
+
+.two-col-text {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 200px;
+     -moz-column-gap: 200px;
+          column-gap: 200px; }
+
+.form-goodies label {
+  cursor: pointer; }
+  .form-goodies label input[type="checkbox"] {
+    display: none; }
+    .form-goodies label input[type="checkbox"] + .cb-label::before {
+      content: "☼ ";
+      position: relative;
+      display: inline-block;
+      margin-right: 5px;
+      color: gold;
+      width: 15px;
+      -webkit-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
+    .form-goodies label input[type="checkbox"]:checked + .cb-label::before {
+      content: "☀︎ ";
+      color: gold;
+      -webkit-animation: scale 1.5 180ms ease-in-out;
+      animation: scale 1.5 180ms ease-in-out; }
